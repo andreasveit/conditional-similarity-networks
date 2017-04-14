@@ -15,7 +15,7 @@ What makes images similar? To measure the similarity between images, they are ty
 
 [Conditional Similarity Networks](https://arxiv.org/abs/1603.07810) address this shortcoming by learning a nonlinear embeddings that gracefully deals with multiple notions of similarity within a shared embedding. Different aspects of similarity are incorporated by assigning responsibility weights to each embedding dimension with respect to each aspect of similarity.
 
-<img src="https://github.com/andreasveit/conditional-similarity-networks/blob/master/images/csn_overview.png?raw=true" width="500">
+<img src="https://github.com/andreasveit/conditional-similarity-networks/blob/master/images/csn_overview.png?raw=true" width="600">
 
 Images are passed through a convolutional network and projected into a nonlinear embedding such that different dimensions encode features for specific notions of similarity. Subsequent masks indicate which dimensions of the embedding are responsible for separate aspects of similarity. We can then compare objects according to various notions of similarity by selecting an appropriate masked subspace.
 
