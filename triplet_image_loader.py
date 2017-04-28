@@ -28,7 +28,7 @@ class TripletImageLoader(torch.utils.data.Dataset):
         self.root = root
         self.base_path = base_path  
         self.filenamelist = []
-        for line in open(filenames_filename):
+        for line in open(os.path.join(self.root, filenames_filename)):
             self.filenamelist.append(line.rstrip('\n'))
         triplets = []
         if split == 'train':
