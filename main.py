@@ -89,7 +89,7 @@ def main():
         TripletImageLoader('data', 'ut-zap50k-images', 'filenames.json', 
             conditions, 'train', n_triplets=args.num_traintriplets,
                         transform=transforms.Compose([
-                            transforms.Scale(112),
+                            transforms.Resize(112),
                             transforms.CenterCrop(112),
                             transforms.RandomHorizontalFlip(),
                             transforms.ToTensor(),
@@ -100,7 +100,7 @@ def main():
         TripletImageLoader('data', 'ut-zap50k-images', 'filenames.json', 
             conditions, 'test', n_triplets=160000,
                         transform=transforms.Compose([
-                            transforms.Scale(112),
+                            transforms.Resize(112),
                             transforms.CenterCrop(112),
                             transforms.ToTensor(),
                             normalize,
@@ -110,7 +110,7 @@ def main():
         TripletImageLoader('data', 'ut-zap50k-images', 'filenames.json', 
             conditions, 'val', n_triplets=80000,
                         transform=transforms.Compose([
-                            transforms.Scale(112),
+                            transforms.Resize(112),
                             transforms.CenterCrop(112),
                             transforms.ToTensor(),
                             normalize,
