@@ -18,7 +18,7 @@ else:
 if os.path.exists(os.path.join('data', 'tripletlists')):
     pass
 else:    
-    urllib.request.urlretrieve("https://s3.amazonaws.com/andreas-datasets/csn_zappos_triplets.zip", filename="data/triplets.zip")
+    urllib.request.urlretrieve("https://vision.cornell.edu/se3/wp-content/uploads/2019/05/csn_zappos_triplets.zip", filename="data/triplets.zip")
     zip_ref = zipfile.ZipFile("data/triplets.zip", 'r')
     zip_ref.extractall("data")
     zip_ref.close()
