@@ -246,7 +246,7 @@ def test(test_loader, tnet, criterion, epoch):
         if args.cuda:
             target = target.cuda()
         target = Variable(target)
-        test_loss =  criterion(dista, distb, target).data[0]
+        test_loss =  criterion(dista, distb, target).data.item()
 
         # measure accuracy and record loss
         acc = accuracy(dista, distb)
